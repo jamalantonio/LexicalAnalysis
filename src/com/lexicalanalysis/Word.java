@@ -1,6 +1,6 @@
-package com.wordfrequency;
+package com.lexicalanalysis;
 
-public class Word {
+public class Word implements Comparable<Word>{
 	private String name;
 	private int frequency;
 	
@@ -40,5 +40,18 @@ public class Word {
 	 */
 	public void increment() {
 		this.frequency++;
+	}
+	
+	/**
+     * Compares the current Word's frequency with specified Word's frequency.
+     * return zero if frequency for both Words is same .
+     * return negative if current frequency is less than specified one.
+     * return positive if specified frequency is greater than specified one.
+     * 
+     * @param word The Word to compare current Word with.
+     */
+	@Override
+	public int compareTo(Word word) {
+		return this.getFrequency() - word.getFrequency();
 	}
 }

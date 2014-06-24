@@ -1,4 +1,4 @@
-package com.wordfrequency;
+package com.lexicalanalysis;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,6 +15,8 @@ public class test {
 		StringBuilder sb = new StringBuilder();
 		String line = br.readLine();
 		
+		LexicalAnalyser la = new LexicalAnalyser();
+		
 		try {
 
 			while (line != null) {
@@ -27,7 +29,7 @@ public class test {
 		}
 
 		//wordList = WordFrequency.calculate("Hello my name is Jamal. I like to... Eat, eat  eat , sleep, lift live  can't !");
-		wordList = WordFrequency.calculate(sb.toString());
+		wordList = la.calculate(sb.toString());
 
 		for (Word word: wordList) {
 			System.out.println(word.getName() + "    " + word.getFrequency());
