@@ -20,7 +20,7 @@ public class LexicalAnalyser {
 	}
 	
 	private List<String> getWords(String str) {
-		List<String> words = new ArrayList<String>();
+		List<String> words = new ArrayList<>();
 		Scanner scan = new Scanner(str);
 		
 		while(scan.hasNext()) {
@@ -61,7 +61,7 @@ public class LexicalAnalyser {
 	}
 	
 	private List<Word> determineFrequency(final List<String> words) {
-		final Map<String, Word> wordList = new HashMap<String, Word>();
+		final Map<String, Word> wordList = new HashMap<>();
 
 	    for (final String word : words) {
 	        if (!wordList.containsKey(word)) {
