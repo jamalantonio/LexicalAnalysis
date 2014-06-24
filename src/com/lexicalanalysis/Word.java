@@ -45,13 +45,31 @@ public class Word implements Comparable<Word>{
 	/**
      * Compares the current Word's frequency with specified Word's frequency.
      * return zero if frequency for both Words is same .
-     * return negative if current frequency is less than specified one.
-     * return positive if specified frequency is greater than specified one.
+     * return negative if comparing word's frequency is lesser than current one's.
+     * return positive if comparing word's frequency is greater than current one's.
      * 
      * @param word The Word to compare current Word with.
      */
 	@Override
 	public int compareTo(Word word) {
-		return this.getFrequency() - word.getFrequency();
+		return word.getFrequency() - this.getFrequency();
+	}
+	
+	public boolean equals(Word word) {
+		
+		if(this.getName().equals(word.getName())) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public boolean equals(String string) {
+		
+		if(this.getName().equals(string)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

@@ -28,7 +28,6 @@ public class test {
 			br.close();
 		}
 
-		//wordList = WordFrequency.calculate("Hello my name is Jamal. I like to... Eat, eat  eat , sleep, lift live  can't !");
 		wordList = la.calculate(sb.toString());
 
 		for (Word word: wordList) {

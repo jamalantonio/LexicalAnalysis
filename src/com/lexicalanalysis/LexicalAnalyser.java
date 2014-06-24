@@ -1,5 +1,6 @@
 package com.lexicalanalysis;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
@@ -10,7 +11,9 @@ public class LexicalAnalyser {
 
 	public List<Word> calculate(String str) {
 		List<String> words = getWords(str);
-		List<Word> wordList = sortByFrequency(determineFrequency(words));
+		List<Word> wordList = determineFrequency(words);
+		
+		Collections.sort(wordList, new WordCompare());
 		
 		return wordList;
 		
@@ -69,9 +72,5 @@ public class LexicalAnalyser {
 	    }
 
 	    return new ArrayList<>(wordList.values());
-	}
-	
-	private List<Word> sortByFrequency(final List<Word> words) {
-		return words;
 	}
 }
