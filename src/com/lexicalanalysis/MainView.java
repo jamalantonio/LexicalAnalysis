@@ -41,7 +41,7 @@ public class MainView extends View{
 				String out = "";
 				
 				for(Word word: wordList) {
-					out += word.getName() + "    " + word.getFrequency() + "\n\r";
+					out += "    " + word.getName() + "\t\t" + word.getFrequency() + "\n\r";
 				}
 				
 				output.setText(out);
