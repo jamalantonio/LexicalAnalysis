@@ -1,7 +1,7 @@
-package com.lexicalanalysis;
+package com.jamalmoir.lexicalanalysis.util;
 
 public class Word implements Comparable<Word>{
-	private String name;
+	private String word;
 	private int frequency;
 	
 	/**
@@ -10,8 +10,8 @@ public class Word implements Comparable<Word>{
 	 * 
 	 * @param name The name of the word.
 	 */
-	public Word(String name) {
-		this.name = name;
+	public Word(String word) {
+		this.word = word;
 		this.frequency = 1;
 	}
 	
@@ -23,12 +23,12 @@ public class Word implements Comparable<Word>{
 	 * @param frequency The frequency of the word.
 	 */
 	public Word(String name, int frequency) {
-		this.name = name;
+		this.word = name;
 		this.frequency = frequency;
 	}
 	
-	public String getName() {
-		return this.name;
+	public String getWord() {
+		return this.word;
 	}
 	
 	public int getFrequency() {
@@ -56,8 +56,7 @@ public class Word implements Comparable<Word>{
 	}
 	
 	public boolean equals(Word word) {
-		
-		if(this.getName().equals(word.getName())) {
+		if(this.getWord().equals(word.getWord())) {
 			return true;
 		} else {
 			return false;
@@ -65,8 +64,7 @@ public class Word implements Comparable<Word>{
 	}
 	
 	public boolean equals(String string) {
-		
-		if(this.getName().equals(string)) {
+		if(this.getWord().equals(string)) {
 			return true;
 		} else {
 			return false;

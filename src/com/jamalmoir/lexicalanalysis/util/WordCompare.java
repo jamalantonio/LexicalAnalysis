@@ -1,4 +1,4 @@
-package com.lexicalanalysis;
+package com.jamalmoir.lexicalanalysis.util;
 
 import java.util.Comparator;
 
